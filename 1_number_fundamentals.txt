@@ -1,0 +1,28 @@
+
+gU-precourse / lesson_2_programming / 1_number_fundamentals.ipynb 
+
+#In [10] sort ascending
+def sort_row(row):
+	return sorted(row)
+sort_row([2, 3, 1])
+
+#In [11] sort descending
+def sort_row_descending(row):
+	return sorted(row,reverse=True)
+
+sort_row_descending([2, 3, 1])
+
+#In [7]:
+def sort_rows(mat):
+	return [[sort_row(mat[0])],[sort_row(mat[1])]]
+
+
+
+#In [26]:
+def average_rows(mat):
+	Ave_list = [average_vector(mat[i]) for i in range(len(mat))]
+	return Ave_list
+
+def transpose(mat):
+	return [list(i) for i in zip(*mat)]
+

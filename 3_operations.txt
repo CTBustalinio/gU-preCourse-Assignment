@@ -1,0 +1,46 @@
+def intersection_of_sets(list_of_sets):
+	intersected = list_of_sets[0]
+	i=0
+	for i in range(len(list_of_sets)):
+		intersected = intersected & list_of_sets[i]
+	return intersected
+
+
+def digits_to_num(digits):
+	number = ""
+	i=0
+	for i in range(len(digits)):
+		number = number+str(digits[i])
+	return int(number)
+
+#94105 is the zip code of GalvanizeU in San Francisco
+
+def concatenate(L1, L2, connector=""):
+	i = 0
+	concatenated = [None]*len(L1)
+	for i in range(len(L1)):
+		concatenated[i] = L1[i]+connector+L2[i]
+	return concatenated
+
+
+def even_odd(numbers):
+	i=0
+	odds = [None]*len(numbers)
+	for i in range(len(numbers)):
+		if numbers[i]%2 == 1:
+			odds[i] = "odd"
+		else:
+			odds[i] = "even"
+	return odds
+
+def word_counts(document):
+	document = document.lower()
+	words = document.split()
+	keys = list(set(words))
+	keys.sort()
+	wordcount = [None]*len(keys)
+	for i in range (0,  len(keys)):
+		wordcount[i] = words.count(keys[i])
+	dictionary = dict(zip(keys, wordcount))
+	print (dictionary)
+

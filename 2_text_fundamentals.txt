@@ -1,0 +1,38 @@
+def word_length(word):
+	return len(word)
+
+def word_count(string):
+	words = string.split()
+	return len(words)
+
+def word_lengths(string):
+	words = string.split()
+	wlength = [len(words[i]) for i in range(len(words))]
+	return wlength
+
+
+def is_palindrome(string):
+	#rev_string = u''.join(reversed(string))
+	return string == u''.join(reversed(string))
+
+def filter_words(word_list, letter):
+	j=0
+	i=0
+	filtered_words = [None]*len(word_list)
+	for i in range(len(word_list)):
+		if word_list[i][0] == letter:
+			filtered_words[j] = word_list[i]
+			j=j+1
+	return filtered_words
+
+
+def acronym(phrase):
+	acronyms=""
+	words = phrase.split()
+	i = 0
+	for i in range(len(words)):
+		acronyms = acronyms+words[i][0].upper()
+	return acronyms
+
+
+

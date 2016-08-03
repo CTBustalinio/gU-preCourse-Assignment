@@ -1,0 +1,13 @@
+def fizzbuzz(numbers, fizz, buzz):
+	fizzybuzzy = [None]*len(numbers)
+	for i in range(0, len(numbers)):
+		if numbers[i]%fizz == 0:
+			if numbers[i]%buzz == 0:
+				fizzybuzzy[i] = "FizzBuzz"
+			else:
+				fizzybuzzy[i] = "Fizz"
+		elif numbers[i]%buzz == 0:
+			fizzybuzzy[i] = "Buzz"
+		else:
+			fizzybuzzy[i] = numbers[i]
+	return fizzybuzzy
